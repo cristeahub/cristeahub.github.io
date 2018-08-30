@@ -25,10 +25,8 @@ function make() {
                             }, React.createElement("h1", undefined, "Christoffer Tønnessen")), React.createElement("div", {
                               className: "contact"
                             }, React.createElement("a", {
-                                  className: "icon-github-alt",
                                   href: "https://github.com/cristeahub/"
                                 }), React.createElement("a", {
-                                  className: "icon-linkedin",
                                   href: "http://no.linkedin.com/in/chrislinked"
                                 })));
             }),

@@ -1,5 +1,5 @@
 module App = {
-    let component = ReasonReact.statelessComponent("App");
+    let component = "App" |> ReasonReact.statelessComponent;
     let make = _children => {
         ...component,
         render: ({state, send}) => {

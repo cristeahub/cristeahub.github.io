@@ -1,4 +1,4 @@
-let component = ReasonReact.statelessComponent("Top");
+let component = "Top" |> ReasonReact.statelessComponent;
 
 let make = _children => {
     ...component,
@@ -8,8 +8,10 @@ let make = _children => {
                 <h1>(ReasonReact.string({js|Christoffer Tønnessen|js}))</h1>
             </div>
             <div className="contact">
-                <a href="https://github.com/cristeahub/" className="icon-github-alt"></a>
-                <a href="http://no.linkedin.com/in/chrislinked" className="icon-linkedin"></a>
+                <a href="https://github.com/cristeahub/">
+                </a>
+                <a href="http://no.linkedin.com/in/chrislinked">
+                </a>
             </div>
         </div>
 };
