@@ -12,8 +12,8 @@
     "bsb-js": "^1.1.7"
   },
   "scripts": {
-      "build": "rm -rf dist && bsb -clean-world && parcel build ./src/index.html",
-      "dev": "parcel ./src/index.html",
-      "clean": "bsb -clean-world"
+    "build": "rm -rf dist && bsb -clean-world && parcel build ./src/index.html",
+    "dev": "parcel ./src/index.html",
+    "clean": "bsb -clean-world"
   }
 }
