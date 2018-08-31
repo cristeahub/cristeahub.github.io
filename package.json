@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "rm -rf dist && bsb -clean-world && parcel build ./src/index.html",
-    "dev": "parcel ./src/index.html",
+    "dev": "parcel ./src/index.html ./src/*.re",
     "clean": "bsb -clean-world"
   }
 }
