@@ -14,7 +14,10 @@
   "suffix": ".bs.js",
   "namespace": true,
   "bs-dependencies": [
-    "reason-react"
+    "reason-react",
+    "@fortawesome/fontawesome-svg-core",
+    "@fortawesome/free-solid-svg-icons",
+    "@fortawesome/react-fontawesome"
   ],
   "refmt": 3,
   "warnings": {

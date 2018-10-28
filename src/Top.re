@@ -9,6 +9,7 @@ let make = _children => {
             </div>
             <div className="contact">
                 <a href="https://github.com/cristeahub/">
+                    <FontAwesomeIcon icon="check-square" />
                 </a>
                 <a href="http://no.linkedin.com/in/chrislinked">
                 </a>
