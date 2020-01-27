@@ -8,109 +8,109 @@ type item = {
 let items: list(item) = [
   {
     title: "Hyre",
-    image: "assets/image/hyre.png",
+    image: "assets/images/hyre.png",
     link: "https://hyre.no",
     description: "Oslo's prime car sharing service!"
   },
   {
     title: "No Invitation",
-    image: "assets/image/no-invitation.png",
+    image: "assets/images/no-invitation.png",
     link: "http://www.pouet.net/prod.php?which=73145",
     description: "Invitation for Revision 2018, won Under Construction 2017."
   },
   {
     title: "Wikipendium",
-    image: "assets/image/wikipendium.png",
+    image: "assets/images/wikipendium.png",
     link: "https://www.wikipendium.no",
     description: "Wikipendium is a free and open source wiki for writing summaries of subjects at your local university. Currently mostly used at NTNU where it's used by thousands of students."
   },
   {
     title: "Zombocam",
-    image: "assets/image/zombocam.png",
+    image: "assets/images/zombocam.png",
     link: "https://chrome.google.com/webstore/detail/zombocam/fnhhcnnemjcldfgipfcebkmkjjfchpnm?hl=en",
     description: "Browser extension for creating funny filters on your web cam."
   },
   {
     title: "Demolicius",
-    image: "assets/image/demolicious.png",
+    image: "assets/images/demolicious.png",
     link: "https://github.com/dmpro2014/report/releases",
     description: "Demolicous is a general purpose SIMT inspired computer. It's made from scratch in the subject TDT4295 on NTNU, the fall 2014. It's the first of its kind in this project to utilize HDMI to display graphics on an HDMI enabled screen. The computer architecture is implemented on an FPGA. A custom PCB is made for the system as a whole."
   },
   {
     title: "Construct",
-    image: "assets/image/construct.png",
+    image: "assets/images/construct.png",
     link: "http://www.pouet.net/prod.php?which=81917",
     description: "Winner of the Solskogen 2019 new school demo compo!"
   },
   {
     title: "Flat Shade Society",
-    image: "assets/image/zeven.png",
+    image: "assets/images/flatshadesociety.png",
     link: "http://www.pouet.net/prod.php?which=81092",
     description: "Entry for Revision 2019 in the pc demo compo!"
   },
   {
     title: "Music Video Dispenser",
-    image: "assets/image/music-video-dispenser.png",
+    image: "assets/images/music-video-dispenser.png",
     link: "https://youtu.be/JTw3iOBvvOA",
     description: "Online movie generator for your music videos."
   },
   {
     title: "feat.fm",
-    image: "assets/image/featfm.png",
+    image: "assets/images/featfm.png",
     link: "",
     description: "feat.fm brought you live music video streaming from artists all over the world!"
   },
   {
     title: "What are you syncing about?",
-    image: "assets/image/syncing-about.png",
+    image: "assets/images/syncing-about.png",
     link: "http://www.pouet.net/prod.php?which=69705",
     description: "Entry for Revision 2017 in the pc demo compo!"
   },
   {
     title: "Everything is fashion",
-    image: "assets/image/fashion.png",
+    image: "assets/images/fashion.png",
     link: "http://www.pouet.net/prod.php?which=65978",
     description: "Entry for Solskogen 2015 in the new school demo compo!"
   },
   {
     title: "nin",
-    image: "assets/image/nin.png",
+    image: "assets/images/nin.png",
     link: "https://github.com/ninjadev/nin",
     description: "nin is a in-browser demo tool to create webgl demos. It is used to create most ninjadev demos."
   },
   {
     title: "Zeven",
-    image: "assets/image/zeven.png",
+    image: "assets/images/zeven.png",
     link: "http://www.pouet.net/prod.php?which=70961",
     description: "Entry for Solskogen 2017 in the new school demo compo!"
   },
   {
     title: "Crankwork Steamfist",
-    image: "assets/image/crankwork-steamfist.png",
+    image: "assets/images/crankworksteamfist.png",
     link: "http://www.pouet.net/prod.php?which=67774",
     description: "Entry for Solskogen 2016 in the pc demo compo!"
   },
   {
     title: "Cute Animals Inc",
-    image: "assets/image/cai.png",
+    image: "assets/images/cuteanimalsinc.png",
     link: "https://arkt.is/cute-animals-inc/",
     description: "Cute Animals Inc is a game created on a 48 hour hackathon called Bacon Game Jam 06."
   },
   {
     title: "Inakuwa Oasis",
-    image: "assets/image/inakuwa-oasis.png",
+    image: "assets/images/inakuwaoasis.png",
     link: "http://www.pouet.net/prod.php?which=63732",
     description: "Entry for Solskogen 2014 in the pc demo compo!"
   },
   {
     title: "TUNL-MNTN-WTER",
-    image: "assets/image/tunnel.png",
+    image: "assets/images/tunlmntnwter.png",
     link: "http://www.pouet.net/prod.php?which=61584",
     description: "Entry for Solskogen 2013 in the pc demo compo!"
   },
   {
     title: "HONEYCOMB",
-    image: "assets/image/honeycomb.png",
+    image: "assets/images/honeycomb.png",
     link: "http://www.pouet.net/prod.php?which=59501",
     description: "Entry for Solskogen 2012 in the web demo compo!"
   },
@@ -118,15 +118,52 @@ let items: list(item) = [
 
 [@react.component]
 let make = (~item: item) => {
-  <div
-    className=("col-md-4 " ++ Css.(
-      style([
-            fontSize(px(48)),
-            fontWeight(`num(600)),
-            color(hex("DB4105")),
-            textAlign(`center),
-      ])))
-    >
-      {item.title |> Utils.text}
-    </div>
+  <div className="col-sm-4">
+    <a href={item.link} rel="noopener noreferrer">
+      <div className=Css.(
+        style([
+          boxShadow(Shadow.box(~y=px(1), ~blur=px(2), rgb(200, 200, 200))),
+          background(hex("f9f9f9")),
+          marginBottom(px(15)),
+          borderRadius(px(3)),
+        ]))
+      >
+        <div
+          className=Css.(
+            style([
+              background(url(item.image)),
+              backgroundSize(cover),
+              backgroundRepeat(noRepeat),
+              backgroundPosition(center),
+              width(pct(100.0)),
+              height(px(200)),
+              borderTopLeftRadius(px(3)),
+              borderTopRightRadius(px(3)),
+            ])
+          )
+        >
+        </div>
+        <div
+          className=Css.(
+            style([
+                  fontSize(px(22)),
+                  fontWeight(`num(600)),
+                  color(hex("DB4105")),
+                  padding(px(8)),
+            ]))
+        >
+          {item.title |> Utils.text}
+        </div>
+        <div
+          className=Css.(
+            style([
+              padding4(~top=px(0), ~bottom=px(8), ~left=px(8), ~right=px(8)),
+            ])
+          )
+        >
+          {item.description |> Utils.text}
+        </div>
+      </div>
+    </a>
+  </div>
 };

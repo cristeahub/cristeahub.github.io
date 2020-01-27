@@ -7,13 +7,20 @@ Css.(
     flexDirection(`column),
     alignItems(`center),
     fontFamily("Georgia, serif"),
-  ])
+    color(hex("333")),
+  ]),
+  global("a", [
+         textDecoration(none),
+         color(hex("333")),
+  ]),
+  global("a:hover", [
+         color(hex("333")),
+         textDecoration(none),
+         cursor(`pointer),
+  ]),
 );
 
-let mainContainer = document##createElement("div");
-document##body##appendChild(mainContainer);
-
-ReactDOMRe.render(
+ReactDOMRe.renderToElementWithId(
   <>
     <Title
       title="cristea.xyz"
@@ -38,5 +45,5 @@ ReactDOMRe.render(
         |> Belt.List.toArray |> React.array;
     }
   </>,
-  mainContainer,
+  "root",
 );
