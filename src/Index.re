@@ -31,7 +31,7 @@ ReactDOMRe.renderToElementWithId(
         {
           "Hello! Here's a collection of some of the things I've been working on. You can contact me at " |> Utils.text
         }
-        <a href="mailto:christoffertonnessen@icloud.com">
+        <a href="mailto:christoffertonnessen@icloud.com" className=Css.(style([color(blue)]))>
           {"christoffertonnessen@icloud.com" |> Utils.text}
         </a>
       </TextCard>

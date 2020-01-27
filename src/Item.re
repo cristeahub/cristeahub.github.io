@@ -14,7 +14,7 @@ let items: list(item) = [
   },
   {
     title: "No Invitation",
-    image: "assets/images/no-invitation.png",
+    image: "assets/images/noinvitation.png",
     link: "http://www.pouet.net/prod.php?which=73145",
     description: "Invitation for Revision 2018, won Under Construction 2017."
   },
@@ -34,7 +34,7 @@ let items: list(item) = [
     title: "Demolicius",
     image: "assets/images/demolicious.png",
     link: "https://github.com/dmpro2014/report/releases",
-    description: "Demolicous is a general purpose SIMT inspired computer. It's made from scratch in the subject TDT4295 on NTNU, the fall 2014. It's the first of its kind in this project to utilize HDMI to display graphics on an HDMI enabled screen. The computer architecture is implemented on an FPGA. A custom PCB is made for the system as a whole."
+    description: "Demolicous is a general purpose SIMT inspired computer built from the scratch up. The architecture is implemented on an FPGA and a custom built PCB was created."
   },
   {
     title: "Construct",
@@ -50,7 +50,7 @@ let items: list(item) = [
   },
   {
     title: "Music Video Dispenser",
-    image: "assets/images/music-video-dispenser.png",
+    image: "assets/images/musicvideodispenser.png",
     link: "https://youtu.be/JTw3iOBvvOA",
     description: "Online movie generator for your music videos."
   },
@@ -62,7 +62,7 @@ let items: list(item) = [
   },
   {
     title: "What are you syncing about?",
-    image: "assets/images/syncing-about.png",
+    image: "assets/images/whatareyousyncingabout.png",
     link: "http://www.pouet.net/prod.php?which=69705",
     description: "Entry for Revision 2017 in the pc demo compo!"
   },
