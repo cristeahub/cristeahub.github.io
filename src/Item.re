@@ -37,6 +37,12 @@ let items: list(item) = [
     description: "Entry for Revision 2017 in the pc demo compo!"
   },
   {
+    title: "Everything is fashion",
+    image: "assets/image/fashion.png",
+    link: "http://www.pouet.net/prod.php?which=65978",
+    description: "Entry for Solskogen 2015 in the new school demo compo!"
+  },
+  {
     title: "Zeven",
     image: "assets/image/zeven.png",
     link: "http://www.pouet.net/prod.php?which=70961",
@@ -47,6 +53,24 @@ let items: list(item) = [
     image: "assets/image/crankwork-steamfist.png",
     link: "http://www.pouet.net/prod.php?which=67774",
     description: "Entry for Solskogen 2016 in the pc demo compo!"
+  },
+  {
+    title: "Inakuwa Oasis",
+    image: "assets/image/inakuwa-oasis.png",
+    link: "http://www.pouet.net/prod.php?which=63732",
+    description: "Entry for Solskogen 2014 in the pc demo compo!"
+  },
+  {
+    title: "TUNL-MNTN-WTER",
+    image: "assets/image/tunnel.png",
+    link: "http://www.pouet.net/prod.php?which=61584",
+    description: "Entry for Solskogen 2013 in the pc demo compo!"
+  },
+  {
+    title: "HONEYCOMB",
+    image: "assets/image/honeycomb.png",
+    link: "http://www.pouet.net/prod.php?which=59501",
+    description: "Entry for Solskogen 2012 in the web demo compo!"
   },
 ];
 
