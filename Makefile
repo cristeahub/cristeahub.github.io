@@ -1,9 +1,5 @@
-.PHONY: all
-all:
-	parcel build src/Index.bs.js -d docs/
-
 .PHONY: build
-build: all
-	cp indexProduction.html docs/index.html
-	cp -r vendor/ docs/vendor/
-	cp -r assets/ docs/assets/
+build:
+	cp dev/indexProduction.html ./index.html
+	cp -r dev/vendor/ ./vendor/
+	cp -r dev/assets/ ./assets/
