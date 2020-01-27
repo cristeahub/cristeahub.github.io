@@ -40,9 +40,14 @@ ReactDOMRe.renderToElementWithId(
       Utils.chunk(Item.items, 3)
         |> List.mapi((indexRow, row) =>
           <div className="row">
-            {row |> List.mapi((indexCol, item) => <Item key={string_of_int(indexRow) ++ string_of_int(indexCol)} item=item />) |> Belt.List.toArray |> React.array}
+            {row
+              |> List.mapi((indexCol, item) => <Item key={string_of_int(indexRow) ++ string_of_int(indexCol)} item=item />)
+              |> Belt.List.toArray
+              |> React.array
+            }
           </div>)
-        |> Belt.List.toArray |> React.array;
+        |> Belt.List.toArray
+        |> React.array;
     }
   </>,
   "root",

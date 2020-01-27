@@ -8,6 +8,9 @@ npm-debug.log
 .bsb.lock
 
 
+dist/
+.cache/
+
 ### Manually Added ###
 #
 # do no commit Javascript files
