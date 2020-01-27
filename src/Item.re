@@ -12,8 +12,7 @@ let items: list(item) = [
     link: "https://hyre.no",
     description: "Oslo's prime car sharing service!"
   },
-  {
-    title: "No Invitation",
+  { title: "No Invitation",
     image: "assets/images/noinvitation.png",
     link: "http://www.pouet.net/prod.php?which=73145",
     description: "Invitation for Revision 2018, won Under Construction 2017."
@@ -118,7 +117,7 @@ let items: list(item) = [
 
 [@react.component]
 let make = (~item: item) => {
-  <div className="col-sm-4">
+  <div className="col-md-4">
     <a href={item.link} rel="noopener noreferrer">
       <div className=Css.(
         style([
@@ -129,6 +128,7 @@ let make = (~item: item) => {
         ]))
       >
         <div
+          title="Image of item"
           className=Css.(
             style([
               background(url(item.image)),

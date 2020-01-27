@@ -1,7 +1,7 @@
 [@react.component]
 let make = (~children) => {
   <div
-    className=("col-sm-12 " ++ Css.(
+    className=("col-md-12 " ++ Css.(
       style([
         margin2(~v=px(12), ~h=px(0)),
         padding2(~v=px(20), ~h=px(20)),
