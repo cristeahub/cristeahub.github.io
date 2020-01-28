@@ -45,7 +45,7 @@ let items: list(item) = [
     title: "Flat Shade Society",
     image: "assets/images/flatshadesociety.png",
     link: "http://www.pouet.net/prod.php?which=81092",
-    description: "Entry for Revision 2019 in the pc demo compo!"
+    description: "Invitation for Solskogen 2019, released at Revision 2018"
   },
   {
     title: "Music Video Dispenser",
