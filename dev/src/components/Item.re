@@ -7,6 +7,12 @@ type item = {
 
 let items: list(item) = [
   {
+    title: "WYPTYWSB",
+    image: "assets/images/wyptywsb.png",
+    link: "https://globalgamejam.org/2020/games/shootin-bricks-5",
+    description: "When you play this you will shoot bricks! Is a game created for GGJ 20. Made in Unity, compiled to WASM."
+  },
+  {
     title: "Hyre",
     image: "assets/images/hyre.png",
     link: "https://hyre.no",
