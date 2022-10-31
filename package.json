@@ -1,0 +1,15 @@
+{
+  "name": "cristeahub.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:cristeahub/cristeahub.github.io.git",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.26",
+    "vue": "^3.2.41"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  }
+}
