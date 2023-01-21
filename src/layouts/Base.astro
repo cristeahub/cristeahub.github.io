@@ -11,11 +11,7 @@ interface Props {
 }
 
 const {
-  meta: {
-    title,
-    description = siteConfig.description,
-    image = "/social-card.png",
-  },
+  meta: { title, description = siteConfig.description, image = "/social-card.png" },
 } = Astro.props;
 ---
 
@@ -24,21 +20,14 @@ const {
     <BaseHead title={title} description={description} image={image} />
     <script define:vars={{ siteConfig }}>
       const root = document.documentElement;
-      const colorThemeMetaTag = document.querySelector(
-        "meta[name='theme-color']"
-      );
+      const colorThemeMetaTag = document.querySelector("meta[name='theme-color']");
 
       // get user preference of dark mode, 1st local storage, 2nd browser
       function getThemePreference() {
-        if (
-          typeof localStorage !== "undefined" &&
-          localStorage.getItem("theme")
-        ) {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
           return localStorage.getItem("theme");
         }
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       }
 
       const isDark = getThemePreference() === "dark";
@@ -47,10 +36,7 @@ const {
       const observer = new MutationObserver(() => {
         const rootIsDark = root.classList.contains("dark");
         // set the meta attribute
-        colorThemeMetaTag.setAttribute(
-          "content",
-          siteConfig[rootIsDark ? "themeColorDark" : "themeColorLight"]
-        );
+        colorThemeMetaTag.setAttribute("content", siteConfig[rootIsDark ? "themeColorDark" : "themeColorLight"]);
         // store user preference
         if (typeof localStorage !== "undefined") {
           localStorage.setItem("theme", rootIsDark ? "dark" : "light");
