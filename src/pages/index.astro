@@ -1,0 +1,176 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+interface Item {
+  title: string;
+  image: string;
+  link: string;
+  description: string;
+}
+
+const items: Item[] = [
+  {
+    title: "WYPTYWSB",
+    image: "wyptywsb.png",
+    link: "https://globalgamejam.org/2020/games/shootin-bricks-5",
+    description:
+      "When you play this you will shoot bricks! Is a game created for GGJ 20. Made in Unity, compiled to WASM.",
+  },
+  {
+    title: "Hyre",
+    image: "hyre.png",
+    link: "https://hyre.no",
+    description: "Oslo's prime car sharing service!",
+  },
+  {
+    title: "No Invitation",
+    image: "noinvitation.png",
+    link: "http://www.pouet.net/prod.php?which=73145",
+    description: "Invitation for Revision 2018, won Under Construction 2017.",
+  },
+  {
+    title: "Wikipendium",
+    image: "wikipendium.png",
+    link: "https://www.wikipendium.no",
+    description:
+      "Wikipendium is a free and open source wiki for writing summaries of subjects at your local university. Currently mostly used at NTNU where it's used by thousands of students.",
+  },
+  {
+    title: "Zombocam",
+    image: "zombocam.png",
+    link: "https://chrome.google.com/webstore/detail/zombocam/fnhhcnnemjcldfgipfcebkmkjjfchpnm?hl=en",
+    description:
+      "Browser extension for creating funny filters on your web cam.",
+  },
+  {
+    title: "Demolicius",
+    image: "demolicious.png",
+    link: "https://github.com/dmpro2014/report/releases",
+    description:
+      "Demolicous is a general purpose SIMT inspired computer built from the scratch up. The architecture is implemented on an FPGA and a custom built PCB was created.",
+  },
+  {
+    title: "Construct",
+    image: "construct.png",
+    link: "http://www.pouet.net/prod.php?which=81917",
+    description: "Winner of the Solskogen 2019 new school demo compo!",
+  },
+  {
+    title: "Flat Shade Society",
+    image: "flatshadesociety.png",
+    link: "http://www.pouet.net/prod.php?which=81092",
+    description: "Invitation for Solskogen 2019, released at Revision 2018.",
+  },
+  {
+    title: "Music Video Dispenser",
+    image: "musicvideodispenser.png",
+    link: "https://youtu.be/JTw3iOBvvOA",
+    description: "Online movie generator for your music videos.",
+  },
+  {
+    title: "feat.fm",
+    image: "featfm.png",
+    link: "",
+    description:
+      "feat.fm brought you live music video streaming from artists all over the world!",
+  },
+  {
+    title: "What are you syncing about?",
+    image: "whatareyousyncingabout.png",
+    link: "http://www.pouet.net/prod.php?which=69705",
+    description: "Entry for Revision 2017 in the pc demo compo!",
+  },
+  {
+    title: "Everything is fashion",
+    image: "fashion.png",
+    link: "http://www.pouet.net/prod.php?which=65978",
+    description: "Entry for Solskogen 2015 in the new school demo compo!",
+  },
+  {
+    title: "nin",
+    image: "nin.png",
+    link: "https://github.com/ninjadev/nin",
+    description:
+      "nin is a in-browser demo tool to create webgl demos. It is used to create most ninjadev demos.",
+  },
+  {
+    title: "Zeven",
+    image: "zeven.png",
+    link: "http://www.pouet.net/prod.php?which=70961",
+    description: "Entry for Solskogen 2017 in the new school demo compo!",
+  },
+  {
+    title: "Crankwork Steamfist",
+    image: "crankworksteamfist.png",
+    link: "http://www.pouet.net/prod.php?which=67774",
+    description: "Entry for Solskogen 2016 in the pc demo compo!",
+  },
+  {
+    title: "Cute Animals Inc",
+    image: "cuteanimalsinc.png",
+    link: "https://arkt.is/cute-animals-inc/",
+    description:
+      "Cute Animals Inc is a game created on a 48 hour hackathon called Bacon Game Jam 06.",
+  },
+  {
+    title: "Inakuwa Oasis",
+    image: "inakuwaoasis.png",
+    link: "http://www.pouet.net/prod.php?which=63732",
+    description: "Entry for Solskogen 2014 in the pc demo compo!",
+  },
+  {
+    title: "TUNL-MNTN-WTER",
+    image: "tunlmntnwter.png",
+    link: "http://www.pouet.net/prod.php?which=61584",
+    description: "Entry for Solskogen 2013 in the pc demo compo!",
+  },
+  {
+    title: "HONEYCOMB",
+    image: "honeycomb.png",
+    link: "http://www.pouet.net/prod.php?which=59501",
+    description: "Entry for Solskogen 2012 in the web demo compo!",
+  },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <h1>Hi, I'm christoffer.</h1>
+      <h4>Here's some of thes stuff I've worked on</h4>
+      <div>
+        {
+          items.map((item) => (
+            <div style={{ flex: 1 }}>
+              <a href={item.link} rel="noopener noreferrer">
+                <div
+                  style={{
+                    background: `url(${item.image})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "noRepeat",
+                    backgroundPosition: "center",
+                    width: "100%",
+                    height: 200,
+                    borderTopLeftRadius: "3px",
+                    borderTopRightRadius: "3px",
+                  }}
+                />
+                <p>{item.title}</p>
+                <p>{item.description}</p>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

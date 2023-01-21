@@ -1,3 +1,3 @@
-# cristea.xyz
+# cto.gg
 
-Webpage.
+Based on astro.build
