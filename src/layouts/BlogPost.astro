@@ -1,56 +1,40 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import type { CollectionEntry } from "astro:content";
 
-export interface Props {
-  content: {
-    title: string;
-    description: string;
-    pubDate?: string;
-    updatedDate?: string;
-    heroImage?: string;
-  };
+import BaseLayout from "./Base.astro";
+import BlogHero from "@/components/blog/Hero";
+
+interface Props {
+	post: CollectionEntry<"post">;
 }
 
-const {
-  content: { title, description, pubDate, updatedDate, heroImage },
-} = Astro.props;
+const { post } = Astro.props;
+const { headings } = await post.render();
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-    <style>
-      .title {
-        font-size: 2em;
-        margin: 0.25em 0 0;
-      }
-      hr {
-        border-top: 1px solid #ddd;
-        margin: 1rem 0;
-      }
-    </style>
-  </head>
-
-  <body>
-    <Header />
-    <main>
-      <article>
-        {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-        <h1 class="title">{title}</h1>
-        {pubDate && <time>{pubDate}</time>}
-        {
-          updatedDate && (
-            <div>
-              Last updated on <time>{updatedDate}</time>
-            </div>
-          )
-        }
-        <hr />
-        <slot />
-      </article>
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout meta={{ title: post.data.title, description: post.data.description }}>
+	<div class="sm:grid sm:grid-cols-[3fr_1fr] sm:items-start sm:gap-x-10">
+		<article>
+			<BlogHero content={post} />
+			<div
+				class="prose prose-sm prose-cactus mt-12 prose-headings:font-semibold prose-headings:before:absolute prose-headings:before:-ml-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
+			>
+				<slot />
+			</div>
+		</article>
+		<aside class="hidden text-right sm:sticky sm:top-20 sm:block">
+			<h2 class="font-semibold">Table of Contents</h2>
+			<ul class="mt-4 space-y-2 text-xs">
+				{
+					headings.map(({ slug, text }) => (
+						<li class="line-clamp-2 hover:text-accent">
+							<a href={`#${slug}`} aria-label={`Scroll to section: ${text}`}>
+								<span>&#35;</span> {text}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</aside>
+	</div>
+</BaseLayout>
