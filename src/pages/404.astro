@@ -1,0 +1,23 @@
+---
+import PageLayout from "@/layouts/Base";
+import { Image } from "@astrojs/image/components";
+import aboutImg from "../assets/about.jpg";
+
+const meta = {
+  title: "Oops! No page!",
+  description: "Oops! No page!",
+};
+---
+
+<PageLayout meta={meta}>
+  <h1 class="title mb-6">404 | Oops no page here</h1>
+  <p class="mb-8">Please use the navigation to find your way back</p>
+  <div class="my-4 grid justify-center">
+    <Image
+      class="rounded-lg"
+      src={aboutImg}
+      alt="A nice road"
+      loading="eager"
+    />
+  </div>
+</PageLayout>
